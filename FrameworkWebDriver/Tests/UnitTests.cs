@@ -19,10 +19,16 @@ namespace FrameworkWebDriver.Tests
         public void SetUp()
         {
             string environment = Environment.GetEnvironmentVariable("ENVIRONMENT") ?? "qa";
+            string browser = Environment.GetEnvironmentVariable("BROWSER") ?? "Chrome";
+
             var propertyReader = new PropertyReader(environment);
 
+            BrowserType browserType = Enum.TryParse(browser, true, out BrowserType parsedBrowserType)
+                                      ? parsedBrowserType
+                                      : BrowserType.Chrome;
+
             var webDriverManager = new WebDriverManager();
-            _driver = webDriverManager.GetWebDriver(BrowserType.Chrome);
+            _driver = webDriverManager.GetWebDriver(browserType);
             _pricingPage = new GoogleCloudProductPricingPage(_driver);
             _summaryPage = new EstimateSummaryPage(_driver);
             _pricingPage.NavigateToPage();
