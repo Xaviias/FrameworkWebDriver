@@ -13,10 +13,10 @@ namespace FrameworkWebDriver
 
         private const string URL = "https://cloud.google.com/products/calculator";
         #region Locators
-        [FindsBy(How = How.XPath, Using = "//button[@class='UywwFc-LgbsSe UywwFc-LgbsSe-OWXEXe-Bz112c-M1Soyc UywwFc-LgbsSe-OWXEXe-dgl2Hf xhASFc']")]
+        [FindsBy(How = How.XPath, Using = "//span[text()='Add to estimate']//parent::button")]
         private IWebElement addToEstimateButton;
 
-        [FindsBy(How = How.XPath, Using = "(//div[@role='button'])[2]")]
+        [FindsBy(How = How.XPath, Using = "//h2[text()='Compute Engine']//parent::div[@role='button']")]
         private IWebElement computeEngineButton;
 
         [FindsBy(How = How.XPath, Using = "//input[@value='1']")]

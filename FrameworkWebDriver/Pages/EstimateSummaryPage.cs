@@ -7,28 +7,28 @@ namespace FrameworkWebDriver
     {
         private readonly IWebDriver _driver;
         #region Locators
-        [FindsBy(How = How.XPath, Using = "(//span[@class='Kfvdz'])[10]")]
+        [FindsBy(How = How.XPath, Using = "//span[text()='Number of Instances']//following-sibling::span")]
         private IWebElement numInstances;
 
-        [FindsBy(How = How.XPath, Using = "(//span[@class='Kfvdz'])[11]")]
+        [FindsBy(How = How.XPath, Using = "//span[text()='Operating System / Software']//following-sibling::span")]
         private IWebElement operatingSystem;
 
-        [FindsBy(How = How.XPath, Using = "(//span[@class='Kfvdz'])[12]")]
+        [FindsBy(How = How.XPath, Using = "//span[text()='Provisioning Model']//following-sibling::span")]
         private IWebElement provisioningModel;
 
-        [FindsBy(How = How.XPath, Using = "(//span[@class='Kfvdz'])[3]")]
+        [FindsBy(How = How.XPath, Using = "//span[text()='Machine type']//following-sibling::span")]
         private IWebElement machineType;
 
-        [FindsBy(How = How.XPath, Using = "(//span[@class='Kfvdz'])[5]")]
+        [FindsBy(How = How.XPath, Using = "//span[text()='GPU Model']//following-sibling::span")]
         private IWebElement gpuModel;
 
-        [FindsBy(How = How.XPath, Using = "(//span[@class='Kfvdz'])[6]")]
+        [FindsBy(How = How.XPath, Using = "//span[text()='Number of GPUs']//following-sibling::span")]
         private IWebElement numOfGPUs;
 
-        [FindsBy(How = How.XPath, Using = "(//span[@class='Kfvdz'])[7]")]
+        [FindsBy(How = How.XPath, Using = "//span[text()='Local SSD']//following-sibling::span")]
         private IWebElement storage;
 
-        [FindsBy(How = How.XPath, Using = "(//span[@class='Kfvdz'])[18]")]
+        [FindsBy(How = How.XPath, Using = "//span[text()='Region']//following-sibling::span")]
         private IWebElement region;
         #endregion
 #pragma warning disable CS8618
